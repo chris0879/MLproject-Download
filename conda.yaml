@@ -1,9 +1,5 @@
-name: my-ml-project
-channels:
-  - conda-forge
+name: download-file
 dependencies:
   - python=3.8
-  - scikit-learn=0.24.2
-  - pandas=1.2.4
-  - requests=2.26.0
-  - mlflow
+  - pip:
+  - requests
