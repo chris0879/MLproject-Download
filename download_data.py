@@ -1,26 +1,19 @@
 import requests
-import os
-import mlflow
 
-def download_data(url, destination):
+def download_file(url, destination):
     response = requests.get(url)
-    if response.status_code == 200:
-        with open(destination, 'wb') as file:
-            file.write(response.content)
-        return True
-    return False
+    with open(destination, 'wb') as file:
+        file.write(response.content)
 
-# URL del file CSV da scaricare
-csv_url = 'https://deliziedelparnaso.it/data.csv'
-# Destinazione locale per il salvataggio del file CSV
-csv_destination = 'data.csv'
+def main():
+    # Specifica l'URL del file remoto da scaricare
+    file_url = 'https://www.deliziedelparnaso.it/data.csv'
 
-# Esegui il download del file CSV
-if download_data(csv_url, csv_destination):
-    print("Il file è stato scaricato correttamente.")
-else:
-    print("Errore durante il download del file.")
+    # Specifica il percorso di destinazione in cui salvare il file scaricato
+    destination_path = 'data.csv'
 
-# Registra il file CSV scaricato come artefatto MLflow
-with mlflow.start_run():
-    mlflow.log_artifact(csv_destination, artifact_path='data')
+    # Esegui il download del file remoto
+    download_file(file_url, destination_path)
+
+if __name__ == '__main__':
+    main()
