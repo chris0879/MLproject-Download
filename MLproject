@@ -7,10 +7,3 @@ entry_points:
     command: "python download_data.py"
   train_model:
     command: "python train_model.py"
-
-dependencies:
-  - python=3.8
-  - scikit-learn=0.24.2
-  - pandas=1.2.4
-  - requests=2.26.0
-  - pip
