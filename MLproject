@@ -1,9 +1,7 @@
-name: my-ml-project
+name: download-file
 
 conda_env: conda.yaml
 
 entry_points:
-  download_data:
-    command: "python download_data.py"
-  train_model:
-    command: "python train_model.py"
+  main:
+    command: python download_file.py
