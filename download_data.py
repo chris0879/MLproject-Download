@@ -10,7 +10,7 @@ def main():
     file_url = 'https://www.deliziedelparnaso.it/data.csv'
 
     # Specifica il percorso di destinazione in cui salvare il file scaricato
-    destination_path = '/app/mlflow_remotedata/chris_python_download.csv'
+    destination_path = './mlflow_remotedata/chris_python_download.csv'
 
     # Esegui il download del file remoto
     download_file(file_url, destination_path)
