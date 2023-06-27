@@ -5,7 +5,7 @@ def download_file(url, destination):
     with open(destination, 'wb') as file:
         file.write(response.content)
 
-def main(destination_path):
+def main():
     # Specifica l'URL del file remoto da scaricare
     file_url = 'https://www.deliziedelparnaso.it/data.csv'
 
