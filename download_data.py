@@ -19,6 +19,4 @@ def main(file_url_p, destination_path_p):
     download_file(file_url, destination_path)
 
 if __name__ == '__main__':
-    file_url = mlflow.get_params()["file_url_p"]
-    destination_path = mlflow.get_params()["destination_path_p"]
-    main(file_url, destination_path)
+   main()
