@@ -10,7 +10,7 @@ def main(destination_path):
     file_url = 'https://www.deliziedelparnaso.it/data.csv'
 
     # Specifica il percorso di destinazione in cui salvare il file scaricato
-    destination_path = '/app/chris_python_download2.csv'
+    destination_path = '/app/chris_python_download.csv'
     #destination_path = destination_path + 'chris_python_download.csv'
 
     # Esegui il download del file remoto
