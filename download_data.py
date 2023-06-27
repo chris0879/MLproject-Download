@@ -1,5 +1,6 @@
 import requests
 import mlflow
+import argparse
 
 def download_file(url, destination):
     response = requests.get(url)
@@ -19,4 +20,8 @@ def main(file_url_p, destination_path_p):
     download_file(file_url, destination_path)
 
 if __name__ == '__main__':
-   main()
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--file_url_p', type=str, required=True)
+    parser.add_argument('--destination_path_p', type=str, required=True)
+    args = parser.parse_args()
+    main(args.file_url_p, args.destination_path_p)
