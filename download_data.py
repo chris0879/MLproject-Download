@@ -18,4 +18,4 @@ def main(file_url_p, destination_path_p):
     download_file(file_url, destination_path)
 
 if __name__ == '__main__':
-    main()
+    main(file_url_p, destination_path_p)
