@@ -17,5 +17,5 @@ def main(file_url_p, destination_path_p):
     # Esegui il download del file remoto
     download_file(file_url, destination_path)
 
-if __name__ == '__main__':
-    main(file_url_p, destination_path_p)
+#if __name__ == '__main__':
+    #main(file_url_p, destination_path_p)
