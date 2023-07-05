@@ -1,6 +1,8 @@
 name: download-file
 dependencies:
   - python=3.8
-  - pip:
+  - pip
   - requests
   - mlflow
+  - pip:
+    - ultralytics
